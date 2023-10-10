@@ -28,6 +28,7 @@ Screenshot example of console output:
 - [Usage](#usage)
     - [Starting the Application](#starting-the-application)
     - [Notification Testing](#notification-testing)
+    - [Running the application using Docker/Compose](#running-the-application-using-docker)
     - [Running the application using PM2](#running-the-application-using-pm2)
     - [Setting Up Multiple Watchers](#setting-up-multiple-watchers)
 - [Contributions](#contributions)
