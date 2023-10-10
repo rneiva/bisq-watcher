@@ -150,6 +150,44 @@ Setting `atStartProcessEntireLogFile` to `true` in the configuration file `bisq-
 
 This feature is useful for testing and validating notifications without waiting for new events to occur in real-time.
 
+## Running the application using Docker
+
+
+* Installing Docker
+
+```shell
+curl -sSL https://get.docker.com | sh
+```
+
+* Installing docker compose
+
+```shell
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+
+chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+```
+
+* Checking docker compose version:
+
+```shell
+$ docker compose version
+Docker Compose version v2.20.3
+```
+
+* Run the docker compose up command to start the services.
+
+```shell
+docker compose up -d
+```
+
+* Checking logs
+
+```shell
+docker compose logs -f
+```
 
 ## Running the application using PM2
 
