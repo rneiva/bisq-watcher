@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  bisq-watcher:
+    image: bisq-watcher
+    build:
+      context: .
+    volumes:
+      - type: bind
+        # file location of bisq.log (put the entire path to avoid errors)
+        source: << source local file >>
+        target: <<< target container>>>
+
